@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Card Layout</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #555;
+}
+
+.card button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: #1d6fa5;
+}
+
+@media (max-width: 600px) {
+  .card {
+    text-align: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h2>Responsive Card Layout</h2>
+
+<div class="cards">
+  <div class="card">
+    <h3>Card One</h3>
+    <p>This is a responsive card.</p>
+    <button>Read More</button>
+  </div>
+
+  <div class="card">
+    <h3>Card Two</h3>
+    <p>Grid adjusts automatically.</p>
+    <button>Read More</button>
+  </div>
+
+  <div class="card">
+    <h3>Card Three</h3>
+    <p>Hover animation included.</p>
+    <button>Read More</button>
+  </div>
+
+  <div class="card">
+    <h3>Card Four</h3>
+    <p>Works on mobile & desktop.</p>
+    <button>Read More</button>
+  </div>
+</div>
+
+</body>
+</html>

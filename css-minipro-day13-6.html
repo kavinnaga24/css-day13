@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Responsive Testimonial Slider</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px;
+}
+.card {
+  flex: 0 0 32%;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.card h4 {
+  margin-top: 10px;
+  color: #555;
+}
+@media (max-width: 900px) {
+  .card {
+    flex: 0 0 48%;
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    flex: 0 0 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<h2>💬 What Our Customers Say</h2>
+
+<div class="slider">
+  <div class="card">
+    <p>"Excellent service and friendly staff!"</p>
+    <h4>- Rahul</h4>
+  </div>
+
+  <div class="card">
+    <p>"The quality is amazing. Highly recommended."</p>
+    <h4>- Priya</h4>
+  </div>
+
+  <div class="card">
+    <p>"Fast delivery and great support."</p>
+    <h4>- Karthik</h4>
+  </div>
+
+  <div class="card">
+    <p>"Affordable prices and good experience."</p>
+    <h4>- Anitha</h4>
+  </div>
+</div>
+
+</body>
+</html>

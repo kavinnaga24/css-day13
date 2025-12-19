@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Navbar</title>
+  <style>
+    nav {
+      background: #1e88e5;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+
+    .menu-btn {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+   
+    @media (max-width: 768px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1565c0;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">MyWebsite</div>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+
+</body>
+</html>
